@@ -121,7 +121,15 @@ module.exports = {
         }catch (e) {
             throw new Error(e);
         }
+    },
+    postTipoCambio: async (req,res)=>{
+        try{
+            pool.query(`INSERT INTO tipo_cambio (fecha,compra,venta) VALUES ($1, $2, $3)`,["","",""])
+        }catch(e){
+            throw new Error(e);
+        }
     }
+
 
 };
 

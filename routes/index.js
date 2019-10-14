@@ -22,5 +22,8 @@ router.get('/api/fecha_importe_dolares', function(req, res, next) {
 router.get('/api/tipo_cambio', function(req, res, next) {
   cliente.getTipoCambio(req,res);
 });
+router.post('/api/tipo_cambio', function(req, res, next) {
+  cliente.postTipoCambio(req,res);
+});
 
 module.exports = router;
